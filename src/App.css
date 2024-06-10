@@ -1,185 +1,55 @@
-/* /* 
-.rooters{
-  background-color:rgb(116, 102, 134);
-  width: 500px;
-  margin-left: 30%;
-  margin-top: 10%;
-  justify-content: center;
-  text-align: center;
-  height: 250px;
-}
-button{
-  font-size: 20px;
-  margin-top: 30px;
-}
-p{
-  font-size: 30px;
-  padding-top: 40px;
-} */
 
-/*card/
-#root{
-  font-family:Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  flex-wrap: wrap;
- 
-}
-.container{
-color:burlywood;
-text-align: center;
-background-color: #353b48;
-width: 400px;
-justify-content: center;
-margin-left: 40%;
-margin-top: 3%;
-position: relative;
-}
-h2{
-  margin-top: 10px;
-}
-h3{
-  margin-top: 10px;
-}
-.image{
-  border-radius: 90px;
-  margin-top: 60px;
- border: 3px solid white;
 
+
+ .create-form label{
+  color: whitesmoke !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
 }
-.pro{
-  padding: 10px;
-  position: absolute;
-  top:60px;
-  right: 50%;
-}
-.Online{
-  background-color: greenyellow;
-  color: black; 
-}
-.Offline{
-  background-color: #febb0b;
-  position: absolute;
-  color: black;
-  margin-top: 90px;
-  margin-left: -40px;
-  padding: 10px;
-}
-.hhh{
-  margin-left: -80%;
-}
-.skills ul li{
-  display: inline-block;
-  border: 2px solid;
-  padding: 10px;
- /* margin: 0 7px 7px 0; */
-  /* font-size: 12px;
-  margin-bottom: 20px;
-} */
-/* button{
-  font-size: 15px;
-  font-family: 'inter'sans-serif;
-  background-color: #0984e0;
-  padding: 10px 25px;
-  margin: 2%;
-  border-radius: 5px;
-}
-button{
-  color: white;
-} 
-{
-  box-sizing: border-box;
-}
-h1{
-  text-align: center;
-  color: lightseagreen;
-}
-.Container{
-  width:100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-input[type="text"]{
-  padding: 10px;
-  width: 100%;
-  margin-bottom: 10px;
-  border: 1px solid  lightseagreen;
-  outline: none;
-}
-label{
-  margin-bottom: 10px;
-  color: lightseagreen;
- 
-}
-.input-label{
-  display: block;
-}
-button{
-  padding: 15px 20px;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 5px;
-  border: 1px solid  lightseagreen;
-  background-color: dodgerblue;
-  margin: 5px;
-  
-}
-.genere{
-  background-color:darkgreen;
-  outline: none;
-}
-*/
 .main{
-  text-align: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #978888;
+  color: whitesmoke;
   flex-direction: column;
-}
-.mains{
-  text-align: center;
-}
 
-.dividi{
-  text-align: center;
-  margin-top: 90px;
-}
-.first{
-  text-align: center;
-  padding: 20px;
 }
 input{
-  width: 300px;
-  height: 30px;
-}
-.second{
-  text-align: center;
-  margin-top: 20px;
-}
-.sub{
-display: block;
-margin-left: 41%;
-margin-top: 30px;
-width: 100px;
-height: 40px;
-}
-table{
-  border: 1px solid black;
-  padding: 5px;
-  margin-left: 300px;
-  margin-top: 80px;
-  border-collapse: collapse;
-}
-table  th{
-  width: 300px;
-}
-table tbody{
-  text-align: center;
-  
+  width: 500px;
 }
 
-.firstest{
-  justify-content: center;
+
+
+.Loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: groove;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* Darker background */
+  z-index: 9999;
+}
+
+.Loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  /* White border at the top */
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 

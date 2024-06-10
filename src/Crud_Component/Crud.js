@@ -59,17 +59,12 @@ function Crud(){
         } 
       );
     };
-
     const handleDelete = (index) => {
-
         const newUserList = [...formData.user];
         newUserList.splice(index, 1); 
         dispatch({ type:DELETE_USER, data: newUserList });
-
     };
-
     return(
-
         <>
         <div id="formContainer">
 
