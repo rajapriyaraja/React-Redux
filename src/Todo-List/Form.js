@@ -1,14 +1,14 @@
 import React, { useContext} from 'react';
 import { TableContext } from './Context';
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Form = () => {
     const { state, handleAddUser, handleUpdateUser, handleNameChange, handlePasswordChange } = useContext(TableContext);
     
     return (
-        <div className="ccontainer">
-            <div className='ccontainer'>
+        <div className="container">
+            <div className='mt-5  '>
                 <label>Name</label>
                 <input
                     type="text"
@@ -25,7 +25,7 @@ const Form = () => {
                     placeholder="Enter Password"
                     // className='py-2 my-2 rounded'
                 />
-                <button className="" onClick={state.selectedUser ? handleUpdateUser : handleAddUser}>
+                <button className="btn btn-primary d-flex justify-content-center mt-5" onClick={state.selectedUser ? handleUpdateUser : handleAddUser}>
                     {state.selectedUser ? 'Update User' : 'Add User'}
                 </button>
             </div>
