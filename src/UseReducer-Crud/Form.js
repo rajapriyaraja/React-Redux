@@ -21,6 +21,7 @@ export const RegisterForm = () => {
         // console.log(namel)
         // console.log(email)
         // console.log(roll)
+        
     }
     const Reset=()=>{
         setEmail("")
