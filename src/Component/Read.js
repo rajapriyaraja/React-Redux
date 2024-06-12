@@ -25,7 +25,7 @@ export function Read() {
   const handleDelete = async (id) => {
     try {
       await onDelete(id);
-      fetchData(); // Fetch and update data after deletion
+      fetchData();
     } catch (error) {
       console.error('Error deleting item:', error);
     }

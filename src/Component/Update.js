@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Form, Button } from "semantic-ui-react";
-import { getUserData, putData } from './MockAPI'; // Import API_URL and putData from MockAPI
+import { getUserData, putData } from './MockAPI'; 
 
 export const Update = () => {
     const { id } = useParams();
@@ -26,7 +26,7 @@ export const Update = () => {
         fetchUserData();
     }, [id]);
     const updateAPIData = () => {
-        putData(id, { // Call putData with id and updated data
+        putData(id, { 
             uname,
             password,
             email
@@ -38,27 +38,30 @@ export const Update = () => {
     }
     return (
         <>
-            <div>Update</div>
+           
             <Form>
-                <div>
+                <div className='mt-3'>
                     <label>Username</label>
                     <input
+                    className='mt-2'
                         type='text'
                         placeholder='name'
                         value={uname}
                         onChange={(e) => setUname(e.target.value)} />
                 </div>
-                <div>
+                <div className='mt-3'>
                     <label>Password</label>
                     <input
+                     className='mt-2'
                         type='password'
                         placeholder='password'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                <div>
+                <div  className='mt-3'>
                     <label>Email</label>
                     <input
+                    className='mt-2'
                         type='email'
                         placeholder='email'
                         value={email}
@@ -66,8 +69,9 @@ export const Update = () => {
                 </div>
                 <div>
                     <Button
-                        type='button' // Change type to button
-                        onClick={updateAPIData}>Update</Button> {/* onClick should trigger updateAPIData */}
+                    className='mt-4'
+                        type='button'
+                        onClick={updateAPIData}>Update</Button> 
                 </div>
             </Form>
         </>

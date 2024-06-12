@@ -6,7 +6,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { postData, getData } from './MockAPI';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import './Create.css'; // Import the CSS file for custom styles
+import './Create.css';
 
 export const Create = () => {
     const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ export const Create = () => {
 
     useEffect(() => {
         fetchData();
-    }, []); // Empty dependency array ensures it only runs once, like componentDidMount
+    }, []); 
 
     const fetchData = async () => {
         try {
@@ -24,13 +24,11 @@ export const Create = () => {
             console.error('Error fetching data:', error);
         }
     };
-
     const validationSchema = Yup.object({
         uname: Yup.string().required('name is required'),
         password: Yup.string().required('password is required'),
         email: Yup.string().email('email must be valid').required('email is required'),
     });
-
     const formik = useFormik({
         initialValues: {
             uname: '',
@@ -51,11 +49,10 @@ export const Create = () => {
             }
         }
     });
-
     return (
         <>
             <div className="form-container">
-                <div>Register</div>
+                
                 {loading && (
                     <div className="loader-container">
                         <RotatingLines
@@ -71,8 +68,9 @@ export const Create = () => {
                 )}
                 <Form className="create-form" onSubmit={formik.handleSubmit}>
                     <Form.Field>
-                        <label>Username</label>
+                    <label className='mt-3'>Username</label>  
                         <input
+                        className='input'
                             type='text'
                             placeholder='name'
                             name='uname'
@@ -86,6 +84,7 @@ export const Create = () => {
                     <Form.Field>
                         <label>Password</label>
                         <input
+                        className='input'
                             type='password'
                             placeholder='password'
                             name='password'
@@ -99,6 +98,7 @@ export const Create = () => {
                     <Form.Field>
                         <label>Email</label>
                         <input
+                        className='input'   
                             type='email'
                             placeholder='email'
                             name="email"
@@ -110,7 +110,8 @@ export const Create = () => {
                         ) : null}
                     </Form.Field>
                     <Form.Field>
-                        <Button type='submit'>Submit</Button>
+                        <Button 
+                        type='submit'>Submit</Button>
                     </Form.Field>
                 </Form>
             </div>
